@@ -1,0 +1,12 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+
+# Project exclude paths
+/cloud-example/config/target/
+/cloud-example/discovery-example/consumer/target/
+/cloud-example/discovery-example/provider/target/
