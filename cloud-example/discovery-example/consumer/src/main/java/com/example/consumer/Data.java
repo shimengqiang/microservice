@@ -8,11 +8,9 @@ package com.example.consumer;/**
  * @create 2020-04-21-17:59
  */
 
-public class Data<T> {
+public class Data<T extends AbstractInnerData> {
 
-    private String name;
-    private String value;
-    private T t;
+   private T t;
 
     public T getT() {
         return t;
@@ -22,19 +20,4 @@ public class Data<T> {
         this.t = t;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
 }
