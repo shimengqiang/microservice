@@ -2,7 +2,6 @@ package com.example.consumer;
 
 import com.example.consumer.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -34,8 +33,7 @@ public class ConsumerApp {
     }
 
     @RestController
-    class Controller{
-
+    static class Controller{
         private final RestTemplate restTemplate;
         @Autowired
         public Controller(RestTemplate restTemplate) {
@@ -47,14 +45,13 @@ public class ConsumerApp {
         }
     }
     @RestController
-    class FegionController{
+    static class FeignController{
         @Autowired
         private UserService userService;
-        @RequestMapping(value = "/fegionEcho/{str}", method = RequestMethod.GET)
+        @RequestMapping(value = "/feignEcho/{str}", method = RequestMethod.GET)
         public String echo(@PathVariable String str) {
             return userService.echo(str);
         }
     }
-
 
 }
