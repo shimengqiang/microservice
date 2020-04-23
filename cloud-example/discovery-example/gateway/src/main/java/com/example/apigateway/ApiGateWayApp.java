@@ -14,4 +14,5 @@ public class ApiGateWayApp {
     public static void main(String[] args) {
         SpringApplication.run(ApiGateWayApp.class, args);
     }
+
 }
