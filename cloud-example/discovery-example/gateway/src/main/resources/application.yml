@@ -1,0 +1,26 @@
+server:
+  port: 8020
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: route
+          uri: http://localhost:8060
+          predicates:
+          - Path=/echo/**
+        - id: route1
+          uri: http://localhost:8060
+          predicates:
+          - Path=/feignEcho/**
+
+
+

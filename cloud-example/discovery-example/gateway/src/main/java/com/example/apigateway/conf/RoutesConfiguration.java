@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * @author shimengqiang
  */
-@Configuration
+// @Configuration
 public class RoutesConfiguration {
     @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
