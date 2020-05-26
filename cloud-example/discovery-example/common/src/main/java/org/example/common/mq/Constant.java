@@ -20,4 +20,12 @@ public class Constant {
 
 	public static final String ROUTING_KEY_3 = "topic.messages";
 
+
+	public static final String FANOUT_EXCHANGE_1 = "fanout_exchange_1";
+
+	public static final String QUEUE_FANOUT_1 = "queue_fanout_1";
+	public static final String QUEUE_FANOUT_2 = "queue_fanout_2";
+	public static final String QUEUE_FANOUT_3 = "queue_fanout_3";
+
+
 }

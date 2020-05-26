@@ -26,4 +26,10 @@ public class SenderTest extends SpringBootTestAbstract{
     		sender.send(i+"", Constant.EXCHANGE_1, Constant.ROUTING_KEY_3);
 		}
     }
+    @Test
+    public void send3() {
+		for (int i = 0; i < 2; i++) {
+    		sender.send(i+"", Constant.FANOUT_EXCHANGE_1,"");
+		}
+    }
 }
