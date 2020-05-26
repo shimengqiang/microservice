@@ -2,6 +2,7 @@ package com.example.provider.service.impl;
 
 import com.example.provider.dao.model.Users;
 import com.example.provider.service.UserService;
+import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
@@ -12,7 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
 
-	private List<Users> usersList = null;
+	private List<Users> usersList = new ArrayList<>();
 
 	@PostConstruct
 	public void init(){
